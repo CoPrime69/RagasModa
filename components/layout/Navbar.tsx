@@ -29,9 +29,6 @@ export default function Navbar() {
     <nav className="bg-transparent p-4 z-50 relative">
       {/* Logo and Mobile menu button */}
       <div className="flex items-center justify-between">
-        <Link href="/" className="text-black text-xl font-bold">
-          YourLogo
-        </Link>
         
         {/* Desktop navigation */}
         <ul className="hidden md:flex space-x-6 text-black">
@@ -78,9 +75,9 @@ export default function Navbar() {
 
       {/* Mobile navigation overlay */}
       {isMenuOpen && (
-        <div className="md:hidden fixed inset-0 bg-black bg-opacity-50 z-40" onClick={() => setIsMenuOpen(false)}>
+        <div className="md:hidden fixed inset-0 bg-transparent bg-opacity-50 z-40" onClick={() => setIsMenuOpen(false)}>
           <div 
-            className="bg-white w-64 h-full absolute right-0 shadow-lg transform transition-transform duration-300 ease-in-out"
+            className="bg-white w-64 px-8 h-full absolute right-0 shadow-lg transform transition-transform duration-300 ease-in-out"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="p-4 border-b border-gray-200 flex justify-between items-center">
