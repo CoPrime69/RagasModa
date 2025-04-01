@@ -9,9 +9,10 @@ export default function Navbar() {
   useEffect(() => {
     if (!isMenuOpen) return;
     
-    const handleClickOutside = (e) => {
-      if (!e.target.closest('nav')) {
-        setIsMenuOpen(false);
+    // Define the event type for the click handler
+    const handleClickOutside = (e: MouseEvent): void => {
+      if (!(e.target as HTMLElement).closest('nav')) {
+      setIsMenuOpen(false);
       }
     };
     
